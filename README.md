@@ -2,7 +2,7 @@
 
 PSMA-DVCGHN is designed for small molecule-miRNA associations (SMAs). A hypergraph is constructed to include higher-order relationships among small molecules and miRNAs. At the same time, a bipartite graph is built, which contains validated SMAs. Above hypergraph and graph are processed by hypergraph and graph convolutional networks, which fuse the small molecule and miRNA features yielded by large language models and topological information of the graph and hypergraph. The bilinear decoder is applied to high-level features for prediction. 
 
-![Figure 1: Model architecture](/figure-1.png)
+![Figure 1: Model architecture](./assets/figure-1.png)
 ---
 
 ## Overview
@@ -46,6 +46,9 @@ PSMA-DVCGHN/
 │       ├── miRNA_llm_dataset2.txt
 │       ├── SM_llm_dataset2.txt
 │       └── miRNA_SM_adj.txt
+│
+├── assets/
+│   └── figure-1.png
 │
 └── README.md
 ```
@@ -297,7 +300,7 @@ The following evaluation metrics are reported:
 
 ## Notes
 
-This repository provides the core implementation and datasets required to reproduce the main experiments of PSMA-DVCHN.
+This repository provides the core implementation and datasets required to reproduce the main experiments of PSMA-DVCGHN.
 
 The current release focuses on the main model implementation. Additional experimental scripts are not included, including:
 
@@ -308,7 +311,7 @@ The current release focuses on the main model implementation. Additional experim
 - Pseudo-positive perturbation experiments
 - Entity-level cold-start experiments
 
-These experiments are used for additional analyses and are not required to run the main PSMA-DVCHN model.
+These experiments are used for additional analyses and are not required to run the main PSMA-DVCGHN model.
 
 ---
 
