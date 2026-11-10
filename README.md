@@ -1,32 +1,31 @@
-# PSMA-DVCHN
+# PSMA-DVCGHN 
 
-Official implementation of **PSMA-DVCHN**, a deep learning framework for small molecule–miRNA association prediction.
-
-PSMA-DVCHN integrates conventional biological features with large language model (LLM)-derived semantic representations and jointly captures pairwise graph topology and higher-order structural relationships through graph convolutional and hypergraph convolutional networks.
+PSMA-DVCGHN is designed for small molecule-miRNA associations (SMAs). A hypergraph is constructed to include higher-order relationships among small molecules and miRNAs. At the same time, a bipartite graph is built, which contains validated SMAs. Above hypergraph and graph are processed by hypergraph and graph convolutional networks, which fuse the small molecule and miRNA features yielded by large language models and topological information of the graph and hypergraph. The bilinear decoder is applied to high-level features for prediction. 
 
 ---
 
 ## Overview
 
-PSMA-DVCHN mainly consists of the following components:
+PSMA-DVCGHN consists of the following stages:
+•	Similarity calculation
+•	Raw feature construction
+•	Graph and hypergraph construction
+•	Dual-view graph and hypergraph convolutional networks
+•	Prediction and optimization 
+The model is designed to capture both pairwise associations and higher-order relationships among small molecules and miRNAs.
 
-- Conventional biological feature representation
-- LLM-derived semantic feature representation
-- Feature alignment and fusion
-- Graph Convolutional Network (GCN)
-- Hypergraph Convolutional Network
-- Contrastive learning between graph views
-- Learnable adaptive feature fusion
-- Bilinear decoder for association prediction
 
-The framework is designed to capture both pairwise association topology and higher-order structural information for small molecule–miRNA association prediction.
+The similarity features are stored in:
+
+The LLM features are stored in:
+
 
 ---
 
 ## Repository Structure
 
 ```text
-PSMA-DVCHN/
+PSMA-DVCGHN/
 ├── code/
 │   ├── main.py
 │   ├── model.py
@@ -106,7 +105,7 @@ The two feature sources are separately processed and aligned before being concat
 
 ## Model Architecture
 
-PSMA-DVCHN adopts a dual-branch graph representation architecture.
+PSMA-DVCGHN adopts a dual-branch graph representation architecture.
 
 ### GCN Branch
 
@@ -175,13 +174,13 @@ Please install the PyTorch build compatible with your CUDA environment before in
 Clone this repository:
 
 ```bash
-git clone https://github.com/mianbao621/PSMA-DVCHN.git
+git clone https://github.com/mianbao621/PSMA-DVCGHN.git
 ```
 
 Enter the project directory:
 
 ```bash
-cd PSMA-DVCHN
+cd PSMA-DVCGHN
 ```
 
 Run the following commands from the root directory of the repository.
@@ -235,7 +234,7 @@ After the warm-up stage, the association prediction loss and contrastive learnin
 
 ## Evaluation Protocol
 
-PSMA-DVCHN is evaluated using five-fold cross-validation.
+PSMA-DVCGHN is evaluated using five-fold cross-validation.
 
 For each fold:
 
@@ -318,4 +317,4 @@ For questions regarding the implementation or datasets, please open an issue in 
 
 Repository:
 
-https://github.com/mianbao621/PSMA-DVCHN
+https://github.com/mianbao621/PSMA-DVCGHN
