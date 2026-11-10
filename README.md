@@ -16,9 +16,12 @@ PSMA-DVCGHN consists of the following stages:
 The model is designed to capture both pairwise associations and higher-order relationships among small molecules and miRNAs.
 
 
-The similarity features are stored in:
+The input feature files for each dataset are listed below.
 
-The LLM features are stored in:
+| Dataset | Conventional biological features | LLM-derived features |
+| --- | --- | --- |
+| Dataset 1 | [miRNA](./data/dataset1/miRNA_feature.txt), [small molecules](./data/dataset1/SM_feature.txt) | [miRNA](./data/dataset1/miRNA_llm_dataset1.txt), [small molecules](./data/dataset1/SM_llm_dataset1.txt) |
+| Dataset 2 | [miRNA](./data/dataset2/miRNA_feature.txt), [small molecules](./data/dataset2/SM_feature.txt) | [miRNA](./data/dataset2/miRNA_llm_dataset2.txt), [small molecules](./data/dataset2/SM_llm_dataset2.txt) |
 
 
 ---
