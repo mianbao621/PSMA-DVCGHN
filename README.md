@@ -2,6 +2,7 @@
 
 PSMA-DVCGHN is designed for small molecule-miRNA associations (SMAs). A hypergraph is constructed to include higher-order relationships among small molecules and miRNAs. At the same time, a bipartite graph is built, which contains validated SMAs. Above hypergraph and graph are processed by hypergraph and graph convolutional networks, which fuse the small molecule and miRNA features yielded by large language models and topological information of the graph and hypergraph. The bilinear decoder is applied to high-level features for prediction. 
 
+![Figure 1: Model architecture](./figure-1.png)
 ---
 
 ## Overview
