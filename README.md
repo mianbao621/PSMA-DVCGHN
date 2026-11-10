@@ -8,11 +8,13 @@ PSMA-DVCGHN is designed for small molecule-miRNA associations (SMAs). A hypergra
 ## Overview
 
 PSMA-DVCGHN consists of the following stages:
-•	Similarity calculation
-•	Raw feature construction
-•	Graph and hypergraph construction
-•	Dual-view graph and hypergraph convolutional networks
-•	Prediction and optimization 
+
+- Similarity calculation
+- Raw feature construction
+- Graph and hypergraph construction
+- Dual-view graph and hypergraph convolutional networks
+- Prediction and optimization
+
 The model is designed to capture both pairwise associations and higher-order relationships among small molecules and miRNAs.
 
 
